@@ -1,4 +1,4 @@
-name: Excel to RDF conversion
+name: excel2rdf
 
 on:
   push:
