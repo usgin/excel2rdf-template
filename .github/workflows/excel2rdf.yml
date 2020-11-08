@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build-test-deploy-vocabulary:
+  convert-validate-deploy-vocabulary:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,7 +26,7 @@ jobs:
           java -jar xls2rdf.jar convert -i ./vocabulary.xlsx -o ./vocabulary.ttl -l en
           mv xls2rdf.log ./logs/conversion.log
 
-      - name: test # tests vocabulary.ttl against set of qSKOS tests
+      - name: validate # validates vocabulary.ttl against set of qSKOS tests
         run: |
           java -jar qSKOS.jar analyze -dc mil,bl ./vocabulary.ttl -o ./logs/validation.log
 
