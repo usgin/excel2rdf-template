@@ -1,5 +1,5 @@
 
-![CI](https://github.com/fair-data-collective/excel2rdf-template/workflows/excel2rdf/badge.svg)
+![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.4273159.svg) ![CI](https://github.com/fair-data-collective/excel2rdf-template/workflows/excel2rdf/badge.svg)
 
 # excel2rdf-template
 
