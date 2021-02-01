@@ -2,6 +2,7 @@
 @prefix pav: <http://purl.org/pav/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix temp-vocab: <http://www.fairdatacollective.com/template-vocabulary/> .
 
 <http://www.fairdatacollective.com/template-vocabulary/> a skos:ConceptScheme;
   dct:contributor <https://orcid.org/0000-0001-6875-5360>;
@@ -11,4 +12,54 @@
   pav:createdOn "2020-10-22T22:00:00+01:00"@en;
   pav:lastUpdatedOn "2020-10-23T08:00:00+01:00"@en;
   pav:version "0.1.0"@en;
+  skos:hasTopConcept temp-vocab:TopConceptOne, temp-vocab:TopConceptTwo;
   skos:prefLabel "Template for building SKOS based controlled vocabulary"@en .
+
+temp-vocab:TopConceptOne a skos:Concept;
+  dct:contributor <https://orcid.org/0000-0001-6875-5360>;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:altLabel "Best Top Concept"@en;
+  skos:definition "This is a top concept which is used to collect a number of narrower concepts."@en;
+  skos:inScheme <http://www.fairdatacollective.com/template-vocabulary/>;
+  skos:narrower temp-vocab:NarrowConceptOne, temp-vocab:NarrowConceptTwo;
+  skos:prefLabel "TopConceptOne"@en;
+  skos:topConceptOf <http://www.fairdatacollective.com/template-vocabulary/> .
+
+temp-vocab:NarrowConceptOne a skos:Concept;
+  dct:creator <https://orcid.org/0000-0001-6875-5360>;
+  skos:broader temp-vocab:TopConceptOne;
+  skos:definition "A definition of NarrowConceptOne, which has a broader concept TopConceptOne."@en;
+  skos:inScheme <http://www.fairdatacollective.com/template-vocabulary/>;
+  skos:prefLabel "NarrowConceptOne"@en .
+
+temp-vocab:NarrowConceptTwo a skos:Concept;
+  dct:creator <https://orcid.org/0000-0001-6875-5360>;
+  skos:broader temp-vocab:TopConceptOne;
+  skos:definition "A definition of NarrowConceptOne, which has a broader concept TopConceptOne."@en;
+  skos:inScheme <http://www.fairdatacollective.com/template-vocabulary/>;
+  skos:prefLabel "NarrowConceptTwo"@en .
+
+temp-vocab:TopConceptTwo a skos:Concept;
+  dct:contributor <https://orcid.org/0000-0001-6875-5360>;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:definition "This is yet another top concept which is used to collect a number of narrower concepts."@en;
+  skos:inScheme <http://www.fairdatacollective.com/template-vocabulary/>;
+  skos:narrower temp-vocab:NarrowConceptFour, temp-vocab:NarrowConceptThree;
+  skos:prefLabel "TopConceptTwo"@en;
+  skos:topConceptOf <http://www.fairdatacollective.com/template-vocabulary/> .
+
+temp-vocab:NarrowConceptThree a skos:Concept;
+  dct:contributor <https://orcid.org/0000-0001-6875-5360>;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader temp-vocab:TopConceptTwo;
+  skos:definition "A definition of NarrowConceptTwo, which has a broader concept TopConceptTwo."@en;
+  skos:inScheme <http://www.fairdatacollective.com/template-vocabulary/>;
+  skos:prefLabel "NarrowConceptThree"@en .
+
+temp-vocab:NarrowConceptFour a skos:Concept;
+  dct:contributor <https://orcid.org/0000-0001-6875-5360>;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader temp-vocab:TopConceptTwo;
+  skos:definition "A definition of NarrowConceptTwo, which has a broader concept TopConceptTwo."@en;
+  skos:inScheme <http://www.fairdatacollective.com/template-vocabulary/>;
+  skos:prefLabel "NarrowConceptFour"@en .
