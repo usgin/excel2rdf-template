@@ -10,7 +10,7 @@
   dct:description "This is a template for building a SKOS-based controlled vocabulary. It is used as base of the worflow described in excel2rdf.readthedocs.io/"@en;
   dct:title "Template for building SKOS based controlled vocabulary"@en;
   pav:createdOn "2020-10-22T22:00:00+01:00"@en;
-  pav:lastUpdatedOn "2021-02-20T15:54:00-08:00"@en;
+  pav:lastUpdatedOn "2021-02-21T16:32:00-08:00"@en;
   pav:version "0.1.2"@en;
   skos:hasTopConcept temp-vocab:TopConceptOne, temp-vocab:TopConceptTwo;
   skos:prefLabel "Template for building SKOS based controlled vocabulary"@en .
