@@ -1,0 +1,273 @@
+# baseURI: file:/C:/Workspace/GithubC/USGIN/excel2rdf-template/SampleType.ttl
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix samtyp: <https://purl.org/orex/voc/sampletype/> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix spt: <https://w3id.org/isample/vocabulary/specimentype/0.9/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<file:/C:/Workspace/GithubC/USGIN/excel2rdf-template/SampleType.ttl>
+  rdf:type owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+.
+<https://purl.org/orex/voc/sampletype>
+  rdf:type skos:ConceptScheme ;
+  dct:created "2022-06-01T00:00:00+00:00"^^xsd:datetime ;
+  dct:creator <https://orcid.org/0000-0001-6041-5302> ;
+  dct:creator "Carina Bennett" ;
+  dct:creator "Mathilde Westermann" ;
+  dct:description "Compiled from JSC-SAMIS Interface control document"@en ;
+  dct:hasVersion "0.2.0" ;
+  dct:modified "2022-09-08T15:50:41-07:00"^^xsd:datetime ;
+  dct:rights <https://spdx.org/licenses/CC0-1.0> ;
+  dct:title "Sample type categories for OSIRIS-REx sample analysis"@en ;
+  skos:hasTopConcept samtyp:materialsample ;
+  skos:prefLabel "Sample type categories for OSIRIS-REx sample analysis"@en ;
+.
+samtyp:aggregate
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broader samtyp:nonpolishedsampletype ;
+  skos:definition "samples include numerous particles (a greater number than can feasibly be counted) that are not consolidated or competently adhering to each other."@en ;
+  skos:exactMatch "<https://w3id.org/isample/vocabulary/specimentype/0.9/genericaggregation>" ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:narrower samtyp:fines ;
+  skos:narrower samtyp:powder ;
+  skos:narrower samtyp:unmodifiedaggregate ;
+  skos:prefLabel "Aggregate sample"@en ;
+.
+samtyp:atomprobetip
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broadMatch "<https://w3id.org/isample/vocabulary/specimentype/0.9/analyticalpreparation>" ;
+  skos:broader samtyp:particle ;
+  skos:definition "Atom probe tips are needle-shaped samples milled out of samples with a focused ion beam (FIB)."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:prefLabel "Atom probe tip"@en ;
+.
+samtyp:chip
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broader samtyp:particle ;
+  skos:definition "A chip is a piece intentionally broken off a particle or a piece that is observed and documented to have broken off a particle."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:prefLabel "Chip"@en ;
+.
+samtyp:eluateliquid
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broader samtyp:liquid ;
+  skos:definition "The base portion resulting from cation-exchange purification of a liquid sample."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:prefLabel "Eluate liquid"@en ;
+.
+samtyp:fibsection
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broadMatch "<https://w3id.org/isample/vocabulary/specimentype/0.9/analyticalpreparation>" ;
+  skos:broader samtyp:particle ;
+  skos:definition "A tiny piece of sample milled out of a polished sample with a focused ion beam (FIB)."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:prefLabel "FIB section"@en ;
+.
+samtyp:fines
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broader samtyp:aggregate ;
+  skos:definition "A collection of particles separated from an aggregate sample to concentrate fine-grained material."@en ;
+  skos:editorialNote "Definition proposed by SMR (https://orcid.org/0000-0001-6041-5302)"@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:prefLabel "Fines"@en ;
+.
+samtyp:liquid
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broadMatch "<https://w3id.org/isample/vocabulary/specimentype/0.9/liquidorgas>" ;
+  skos:broader samtyp:nonpolishedsampletype ;
+  skos:definition "Solution that a solid sample has been extracted into."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:narrower samtyp:eluateliquid ;
+  skos:narrower samtyp:washliquid ;
+  skos:prefLabel "Liquid"@en ;
+.
+samtyp:materialsample
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broadMatch "<https://w3id.org/isample/vocabulary/specimentype/0.9/physicalspecimen>" ;
+  skos:definition "any material sample from the O-REx sample return collection. Top concept of sample type classification."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:narrower samtyp:nonpolishedsampletype ;
+  skos:narrower samtyp:polishedsample ;
+  skos:narrower samtyp:pottedbutt ;
+  skos:narrower samtyp:witnessplate ;
+  skos:prefLabel "Material sample"@en ;
+  skos:topConceptOf <https://purl.org/orex/voc/sampletype> ;
+.
+samtyp:microtomeslice
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broadMatch "<https://w3id.org/isample/vocabulary/specimentype/0.9/analyticalpreparation>" ;
+  skos:broader samtyp:particle ;
+  skos:definition "A microtome slice is a very thin slice of material prepared by cutting a particle embedded in an epoxy bullet into numerous slices with a ultramicrotome. Multiple slices are typically mounted onto a single TEM grid, and the grid will be given a single sample name. Individual slices are rarely assigned identifiers."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:prefLabel "Microtome slice"@en ;
+.
+samtyp:nonpolishedsampletype
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broader samtyp:materialsample ;
+  skos:definition "Samples that do not have a polished surface"@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:narrower samtyp:aggregate ;
+  skos:narrower samtyp:liquid ;
+  skos:narrower samtyp:particle ;
+  skos:narrower samtyp:residue ;
+  skos:narrower samtyp:temgrid ;
+  skos:prefLabel "Non-polished sample type"@en ;
+.
+samtyp:particle
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broadMatch "<https://w3id.org/isample/vocabulary/specimentype/0.9/othersolidobject>" ;
+  skos:broader samtyp:nonpolishedsampletype ;
+  skos:definition "A particle is a competent individual, non-polished or mounted sample of any size; an individual piece of rock, either broken or cut from a larger piece, or as recovered from the sample return."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:narrower samtyp:atomprobetip ;
+  skos:narrower samtyp:chip ;
+  skos:narrower samtyp:fibsection ;
+  skos:narrower samtyp:microtomeslice ;
+  skos:prefLabel "Particle"@en ;
+.
+samtyp:polishedpottedbutt
+  rdf:type skos:Concept ;
+  skos:broader samtyp:polishedsample ;
+  skos:broader samtyp:pottedbutt ;
+  skos:definition "A potted butt from which it is not possible to make a thin or thick section of any particle, so polished and used as the primary sample preparation and holder for in situ analyses."@en ;
+  skos:editorialNote "Class and definition  added by SMR (https://orcid.org/0000-0001-6041-5302)"@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:prefLabel "Polished potted butt"@en ;
+.
+samtyp:polishedsample
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broadMatch "<https://w3id.org/isample/vocabulary/specimentype/0.9/analyticalpreparation>" ;
+  skos:broader samtyp:materialsample ;
+  skos:definition "Samples that have a polished surface suitable for various microanalysis techniques"@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:narrower samtyp:polishedpottedbutt ;
+  skos:narrower samtyp:pressedgrainsepoxy ;
+  skos:narrower samtyp:pressedgrainsmetal ;
+  skos:narrower samtyp:thicksection ;
+  skos:narrower samtyp:thinsection ;
+  skos:prefLabel "Polished sample"@en ;
+.
+samtyp:pottedbutt
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broadMatch "<https://w3id.org/isample/vocabulary/specimentype/0.9/othersolidobject>" ;
+  skos:broader samtyp:materialsample ;
+  skos:definition "One or more particles mounted in epoxy from which multiple thin or thick sections can be made."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:narrower samtyp:polishedpottedbutt ;
+  skos:prefLabel "Potted butt"@en ;
+.
+samtyp:powder
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broader samtyp:aggregate ;
+  skos:definition "Powders are samples that have been intentionally modified to reduce the average particle size. Powders can be generated by pulverizing particles, chips, and/or aggregate samples."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:prefLabel "Powder"@en ;
+.
+samtyp:pressedgrainsepoxy
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broader samtyp:polishedsample ;
+  skos:definition "One or more particles mounted in epoxy and polished on one exposed side."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:prefLabel "Pressed grains in epoxy"@en ;
+.
+samtyp:pressedgrainsmetal
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broader samtyp:polishedsample ;
+  skos:definition "One or more particles mounted in metal and polished on one exposed side."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:prefLabel "Pressed grains in metal"@en ;
+.
+samtyp:residue
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broadMatch "<https://w3id.org/isample/vocabulary/specimentype/0.9/analyticalpreparation>"@en ;
+  skos:broader samtyp:nonpolishedsampletype ;
+  skos:definition "solid material leftover after dissolution of samples and subsequent chemical processing."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:prefLabel "Residue"@en ;
+.
+samtyp:temgrid
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broadMatch "<https://w3id.org/isample/vocabulary/specimentype/0.9/analyticalpreparation>" ;
+  skos:broader samtyp:nonpolishedsampletype ;
+  skos:definition "FIB sections and microtome slices are commonly set onto small grids for handling, transport, and analysis of these delicate and ultra-thin samples in a transmission electron microscope (TEM). While the grids are not samples themselves, if one or more FIB section or microtome slices are attached to the same grid, the grid itself will be given a single sample identifier (similar to how there are multiple grains in a grain mount, but they are not given individual sample IDs)."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:prefLabel "TEM grid mount"@en ;
+.
+samtyp:thicksection
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broader samtyp:polishedsample ;
+  skos:definition "Samples may be polished on only one side. The sample thickness is greater than a standard thin section (~30 µm) – the desired thickness should be specified. Thick sections are typically mounted onto a glass slide when prepared at JSC thick sections on a glass slide are polished on both sides."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:prefLabel "Thick section"@en ;
+.
+samtyp:thinsection
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broader samtyp:polishedsample ;
+  skos:definition "Samples mounted onto a glass slide and polished to a thickness of ~30 µm. Thin sections made at JSC are polished on both sides (the side adhered to the glass with epoxy and the exposed side)."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:prefLabel "Thin section"@en ;
+.
+samtyp:unmodifiedaggregate
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broader samtyp:aggregate ;
+  skos:definition "A collections of particles that have not been intentionally modified. The particles in aggregate samples do not necessarily have any relationship to each other aside from being returned OSIRIS-REx material."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:prefLabel "Unmodified aggregate"@en ;
+.
+samtyp:washliquid
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broader samtyp:liquid ;
+  skos:definition "The water portion resulting from cation-exchange purification of a liquid sample."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:prefLabel "Wash liquid"@en ;
+.
+samtyp:witnessplate
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/OREXSAMPLE/pages/410288138> ;
+  skos:broadMatch "<https://w3id.org/isample/vocabulary/specimentype/0.9/othersolidobject>" ;
+  skos:broader samtyp:materialsample ;
+  skos:definition "Witness plates include aluminum metal and sapphire plates flown with the spacecraft on the TAGSAM head and inside the sample canister. In addition, witness plates include aluminum foils and silicon wafers deployed during assembly, testing and launch operations (ATLO), curation lab monitoring, and/or sample processing."@en ;
+  skos:inScheme <https://purl.org/orex/voc/sampletype> ;
+  skos:prefLabel "Witness plate"@en ;
+.

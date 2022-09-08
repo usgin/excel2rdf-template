@@ -1,0 +1,98 @@
+# baseURI: file:/C:/Workspace/GithubC/USGIN/excel2rdf-template/workgroups.ttl
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix orwg: <https://purl.org/orex/voc/workgroup/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<file:/C:/Workspace/GithubC/USGIN/excel2rdf-template/workgroups.ttl>
+  rdf:type owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+.
+<https://purl.org/orex/voc/workgroup>
+  rdf:type skos:ConceptScheme ;
+  dct:created "2022-06-01T00:00:00+00:00"^^xsd:datetime ;
+  dct:creator <https://orcid.org/0000-0001-6041-5302> ;
+  dct:description "workgroups, with codes, as defined for sample analysis; based on documents in O-REx confluence."@en ;
+  dct:hasVersion "0.1.0" ;
+  dct:modified "2022-09-08T16:22:08-07:00"^^xsd:datetime ;
+  dct:rights <https://spdx.org/licenses/CC0-1.0> ;
+  dct:title "OSIRIS-REx sample analysis workgroups"@en ;
+  skos:hasTopConcept orwg:SAWG ;
+  skos:prefLabel "OSIRIS-REx sample analysis workgroups"@en ;
+.
+orwg:CWG
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/WG/overview> ;
+  skos:broader orwg:SAWG ;
+  skos:inScheme <https://purl.org/orex/voc/workgroup> ;
+  skos:notation "CWG"@en ;
+  skos:prefLabel "Curation Working Group (CWG)"@en ;
+.
+orwg:MAPWG
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/WG/overview> ;
+  skos:broader orwg:SAWG ;
+  skos:inScheme <https://purl.org/orex/voc/workgroup> ;
+  skos:notation "MAPWG"@en ;
+  skos:prefLabel "Mineralogy and Petrology Working Group (MAPWG)"@en ;
+.
+orwg:PADWG
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/WG/overview> ;
+  skos:broader orwg:SAWG ;
+  skos:inScheme <https://purl.org/orex/voc/workgroup> ;
+  skos:notation "PADWG"@en ;
+  skos:prefLabel "Contact Pad Working Group (PADWG)"@en ;
+.
+orwg:SAWG
+  rdf:type skos:Concept ;
+  skos:definition "Top concept for workgroups, includes all workgroup teams. Skos:broader in this vocabulary means 'part of'"@en ;
+  skos:inScheme <https://purl.org/orex/voc/workgroup> ;
+  skos:narrower orwg:CWG ;
+  skos:narrower orwg:MAPWG ;
+  skos:narrower orwg:PADWG ;
+  skos:narrower orwg:SEIWG ;
+  skos:narrower orwg:SOAWG ;
+  skos:narrower orwg:SPTAWG ;
+  skos:narrower orwg:SSAWG ;
+  skos:notation "SAWG"@en ;
+  skos:prefLabel "OSIRIS-REx Sample Analysis Working Group"@en ;
+  skos:topConceptOf <https://purl.org/orex/voc/workgroup> ;
+.
+orwg:SEIWG
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/WG/overview> ;
+  skos:broader orwg:SAWG ;
+  skos:inScheme <https://purl.org/orex/voc/workgroup> ;
+  skos:notation "SEIWG"@en ;
+  skos:prefLabel "Sample Elements and Isotopes Working Group (SEIWG)"@en ;
+.
+orwg:SOAWG
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/WG/overview> ;
+  skos:broader orwg:SAWG ;
+  skos:inScheme <https://purl.org/orex/voc/workgroup> ;
+  skos:notation "SOAWG"@en ;
+  skos:prefLabel "Sample Organic Analysis Working Group (SOAWG)"@en ;
+.
+orwg:SPTAWG
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/WG/overview> ;
+  skos:broader orwg:SAWG ;
+  skos:inScheme <https://purl.org/orex/voc/workgroup> ;
+  skos:notation "SPTAWG"@en ;
+  skos:prefLabel "Sample Physical and Thermal Analysis Working Group (SPTAWG)"@en ;
+.
+orwg:SSAWG
+  rdf:type skos:Concept ;
+  dct:source <https://osiris-rex.atlassian.net/wiki/spaces/WG/overview> ;
+  skos:broader orwg:SAWG ;
+  skos:inScheme <https://purl.org/orex/voc/workgroup> ;
+  skos:notation "SSAWG"@en ;
+  skos:prefLabel "Sample Spectral Analysis Working Group (SSAWG)"@en ;
+.

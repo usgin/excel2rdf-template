@@ -1,0 +1,617 @@
+# baseURI: file:/C:/Workspace/GithubC/USGIN/excel2rdf-template/AnalyticalTechnique.ttl
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix antech: <https://purl.org/orex/voc/analyticalTechnique/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<file:/C:/Workspace/GithubC/USGIN/excel2rdf-template/AnalyticalTechnique.ttl>
+  rdf:type owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+.
+<https://purl.org/orex/voc/analyticalTechnique>
+  rdf:type skos:ConceptScheme ;
+  dct:created "44812"^^xsd:datetime ;
+  dct:creator <https://orcid.org/0000-0001-5671-5388> ;
+  dct:creator <https://orcid.org/0000-0001-6041-5302> ;
+  dct:creator "Carina Bennett"@en ;
+  dct:description "Identifiers for analytical techniques used in OSIRIS-REx sample analysis, compiled from work descriptions in the O-REx confluence."@en ;
+  dct:hasVersion "0.2.0" ;
+  dct:modified "44812"^^xsd:datetime ;
+  dct:rights <https://spdx.org/licenses/CC0-1.0> ;
+  dct:title "OSIRIS-REx Sample Analytical Techniques"@en ;
+  skos:hasTopConcept antech:Analysistechnique ;
+  skos:prefLabel "O-REx sample analytical techniques"@en ;
+.
+antech:APT
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "APT"@en ;
+  skos:prefLabel "Atom probe tomography"@en ;
+.
+antech:ARGT
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "ARGT"@en ;
+  skos:prefLabel "40ar/39ar geochronology and thermochronology"@en ;
+.
+antech:ARM
+  rdf:type skos:Concept ;
+  dct:source "SPTAWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "ARM"@en ;
+  skos:prefLabel "Angle of repose measurement"@en ;
+.
+antech:Analysistechnique
+  rdf:type skos:Concept ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:narrower antech:APT ;
+  skos:narrower antech:ARM ;
+  skos:narrower antech:CAPD ;
+  skos:narrower antech:COMPT ;
+  skos:narrower antech:DSC ;
+  skos:narrower antech:DSSM ;
+  skos:narrower antech:Electronmicroscopy ;
+  skos:narrower antech:GC ;
+  skos:narrower antech:GPYC ;
+  skos:narrower antech:MCFMS ;
+  skos:narrower antech:Massspectrometry ;
+  skos:narrower antech:NI-MI ;
+  skos:narrower antech:PCD-AFM ;
+  skos:narrower antech:QRI ;
+  skos:narrower antech:SCBTCA ;
+  skos:narrower antech:SLS ;
+  skos:narrower antech:STHM-AFM ;
+  skos:narrower antech:SV-RUEC ;
+  skos:narrower antech:Spectroscopy ;
+  skos:narrower antech:VLM ;
+  skos:narrower antech:VNMIR ;
+  skos:narrower antech:XCT ;
+  skos:narrower antech:XRD ;
+  skos:prefLabel "Analysis technique"@en ;
+  skos:topConceptOf <https://purl.org/orex/voc/analyticalTechnique> ;
+.
+antech:CAPD
+  rdf:type skos:Concept ;
+  dct:source "SPTAWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "CAPD"@en ;
+  skos:prefLabel "Capacitance dilatometry"@en ;
+.
+antech:COMPT
+  rdf:type skos:Concept ;
+  dct:source "SPTAWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "COMPT"@en ;
+  skos:prefLabel "Compression test"@en ;
+.
+antech:DSC
+  rdf:type skos:Concept ;
+  dct:source "SPTAWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "DSC"@en ;
+  skos:prefLabel "Differential scanning calorimetry"@en ;
+.
+antech:DSSM
+  rdf:type skos:Concept ;
+  dct:source "SPTAWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "DSSM"@en ;
+  skos:prefLabel "Direct shear strength measurement"@en ;
+.
+antech:EA-IRMS
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  dct:source "SOAWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "EA-IRMS"@en ;
+  skos:prefLabel "Elemental analysis - isotope ratio mass spectrometry"@en ;
+.
+antech:EMPA
+  rdf:type skos:Concept ;
+  dct:source "MAPWG"@en ;
+  skos:broader antech:Spectroscopy ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Spectroscopy ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "EMPA"@en ;
+  skos:prefLabel "Electron microprobe analysis"@en ;
+.
+antech:Electronmicroscopy
+  rdf:type skos:Concept ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:narrower antech:FIB-SEM ;
+  skos:narrower antech:SEM ;
+  skos:narrower antech:TEM ;
+  skos:prefLabel "Electron microscopy"@en ;
+.
+antech:FIB-SEM
+  rdf:type skos:Concept ;
+  dct:source "MAPWG"@en ;
+  skos:broader antech:Electronmicroscopy ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Electronmicroscopy ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "FIB-SEM"@en ;
+  skos:prefLabel "Focused ion beam–scanning electron microscopy"@en ;
+.
+antech:FINESSE
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "FINESSE"@en ;
+  skos:prefLabel "Stepped heating carbon and nitrogen isotopic compositions"@en ;
+.
+antech:FTICR-MS
+  rdf:type skos:Concept ;
+  dct:source "SOAWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "FTICR-MS"@en ;
+  skos:prefLabel "Fourier transform ion cyclotron resonance mass spectrometry"@en ;
+.
+antech:GC
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "GC"@en ;
+  skos:prefLabel "Gamma counting"@en ;
+.
+antech:GC-C-IRMS
+  rdf:type skos:Concept ;
+  dct:source "SOAWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "GC-C-IRMS"@en ;
+  skos:prefLabel "Gas chromatography–combustion–isotopic ratio mass spectrometry"@en ;
+.
+antech:GC-MS
+  rdf:type skos:Concept ;
+  dct:source "SOAWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "GC-MS"@en ;
+  skos:prefLabel "Gas chromatography-mass spectrometry"@en ;
+.
+antech:GPYC
+  rdf:type skos:Concept ;
+  dct:source "SPTAWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "GPYC"@en ;
+  skos:prefLabel "Gas pycnometry"@en ;
+.
+antech:HR-ICPMS
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "HR-ICPMS"@en ;
+  skos:prefLabel "High-resolution inductively coupled plasma mass spectrometry"@en ;
+.
+antech:ICP-OES
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "ICP-OES"@en ;
+  skos:prefLabel "Inductively coupled plasma - optical emission spectrometry"@en ;
+.
+antech:ICPMS
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "ICPMS"@en ;
+  skos:prefLabel "Quadrupole inductively coupled plasma mass spectrometry"@en ;
+.
+antech:LA-ICPMS
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:definition "NOTE: Probably will be removed from SAP"@en ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "LA-ICPMS"@en ;
+  skos:prefLabel "Laser ablation inductively coupled plasma mass spectrometry"@en ;
+.
+antech:LAF
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "LAF"@en ;
+  skos:prefLabel "Laser assisted fluorination for bulk oxygen isotope ratio measurements"@en ;
+.
+antech:LC-MS
+  rdf:type skos:Concept ;
+  dct:source "SOAWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "LC-MS"@en ;
+  skos:prefLabel "Liquid chromatography-mass spectrometry"@en ;
+.
+antech:MC-ICPMS
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "MC-ICPMS"@en ;
+  skos:prefLabel "Multi-collector inductively coupled plasma mass spectrometry"@en ;
+.
+antech:MCFMS
+  rdf:type skos:Concept ;
+  dct:source "SPTAWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "MCFMS"@en ;
+  skos:prefLabel "Mini cryogen-free measurement system for thermal conductivity"@en ;
+.
+antech:Massspectrometry
+  rdf:type skos:Concept ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:narrower antech:ARGT ;
+  skos:narrower antech:EA-IRMS ;
+  skos:narrower antech:FINESSE ;
+  skos:narrower antech:FTICR-MS ;
+  skos:narrower antech:GC-C-IRMS ;
+  skos:narrower antech:GC-MS ;
+  skos:narrower antech:HR-ICPMS ;
+  skos:narrower antech:ICP-OES ;
+  skos:narrower antech:ICPMS ;
+  skos:narrower antech:LA-ICPMS ;
+  skos:narrower antech:LAF ;
+  skos:narrower antech:LC-MS ;
+  skos:narrower antech:MC-ICPMS ;
+  skos:narrower antech:NANOSIMS ;
+  skos:narrower antech:NG-NS-MS ;
+  skos:narrower antech:NI-NGMS ;
+  skos:narrower antech:RI-TOF-NGMS ;
+  skos:narrower antech:SHRIMP ;
+  skos:narrower antech:SIMS ;
+  skos:narrower antech:SNMS ;
+  skos:narrower antech:TIMS ;
+  skos:narrower antech:uL2MS ;
+  skos:prefLabel "Mass spectrometry"@en ;
+.
+antech:NANOSIMS
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "NANOSIMS"@en ;
+  skos:prefLabel "Nanoscale secondary ion mass spectrometry"@en ;
+.
+antech:NG-NS-MS
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "NG-NS-MS"@en ;
+  skos:prefLabel "Noble gas and nitrogen static mass spectrometry"@en ;
+.
+antech:NI-MI
+  rdf:type skos:Concept ;
+  dct:source "SPTAWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "NI-MI"@en ;
+  skos:prefLabel "Nanoindentation and microindentation"@en ;
+.
+antech:NI-NGMS
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "NI-NGMS"@en ;
+  skos:prefLabel "Neutron irradiation noble gas mass spectrometry"@en ;
+.
+antech:NMR
+  rdf:type skos:Concept ;
+  dct:source "SOAWG"@en ;
+  skos:broader antech:Spectroscopy ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Spectroscopy ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "NMR"@en ;
+  skos:prefLabel "Nuclear magnetic resonance spectroscopy"@en ;
+.
+antech:PCD-AFM
+  rdf:type skos:Concept ;
+  dct:source "SPTAWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "PCD-AFM"@en ;
+  skos:prefLabel "Particle cohesion determination with afm"@en ;
+.
+antech:QRI
+  rdf:type skos:Concept ;
+  dct:source "SSAWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "QRI"@en ;
+  skos:prefLabel "Quantitative reflectance imaging"@en ;
+.
+antech:RAMAN
+  rdf:type skos:Concept ;
+  dct:source "MAPWG"@en ;
+  dct:source "SOAWG"@en ;
+  skos:broader antech:Spectroscopy ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Spectroscopy ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "RAMAN"@en ;
+  skos:prefLabel "Raman vibrational spectroscopy"@en ;
+.
+antech:RI-TOF-NGMS
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "RI-TOF-NGMS"@en ;
+  skos:prefLabel "Resonance ionization time of flight noble gas mass spectrometry"@en ;
+.
+antech:SCBTCA
+  rdf:type skos:Concept ;
+  dct:source "SPTAWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "SCBTCA"@en ;
+  skos:prefLabel "Spherical cell bulk thermal conductivity analysis"@en ;
+.
+antech:SEM
+  rdf:type skos:Concept ;
+  dct:source "MAPWG"@en ;
+  skos:broader antech:Electronmicroscopy ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Electronmicroscopy ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "SEM"@en ;
+  skos:prefLabel "Scanning electron microscopy"@en ;
+.
+antech:SHRIMP
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "SHRIMP"@en ;
+  skos:prefLabel "Sensitive high mass resolution ion microprobe"@en ;
+.
+antech:SIMS
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "SIMS"@en ;
+  skos:prefLabel "Secondary ion mass spectrometry"@en ;
+.
+antech:SLS
+  rdf:type skos:Concept ;
+  dct:source "SPTAWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "SLS"@en ;
+  skos:prefLabel "Structured light scanning"@en ;
+.
+antech:SNMS
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "SNMS"@en ;
+  skos:prefLabel "Secondary neutral mass spectrometry"@en ;
+.
+antech:STHM-AFM
+  rdf:type skos:Concept ;
+  dct:source "SPTAWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "STHM-AFM"@en ;
+  skos:prefLabel "Scanning thermal microscopy with afm"@en ;
+.
+antech:SV-RUEC
+  rdf:type skos:Concept ;
+  dct:source "SPTAWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "SV-RUEC"@en ;
+  skos:prefLabel "Seismic velocities and rock ultrasonic elastic constants"@en ;
+.
+antech:Spectroscopy
+  rdf:type skos:Concept ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:narrower antech:EMPA ;
+  skos:narrower antech:NMR ;
+  skos:narrower antech:RAMAN ;
+  skos:narrower antech:XANES ;
+  skos:narrower antech:XPS ;
+  skos:narrower antech:XRF ;
+  skos:prefLabel "Spectroscopy"@en ;
+.
+antech:TEM
+  rdf:type skos:Concept ;
+  dct:source "MAPWG"@en ;
+  skos:broader antech:Electronmicroscopy ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Electronmicroscopy ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "TEM"@en ;
+  skos:prefLabel "Transmission electron microscopy"@en ;
+.
+antech:TIMS
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "TIMS"@en ;
+  skos:prefLabel "Thermal ionization mass spectrometry"@en ;
+.
+antech:VLM
+  rdf:type skos:Concept ;
+  dct:source "MAPWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "VLM"@en ;
+  skos:prefLabel "Visible light microscopy"@en ;
+.
+antech:VNMIR
+  rdf:type skos:Concept ;
+  dct:source "SSAWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "VNMIR"@en ;
+  skos:prefLabel "Visible, near-infrared, and mid-infrared imaging"@en ;
+.
+antech:XANES
+  rdf:type skos:Concept ;
+  dct:source "MAPWG"@en ;
+  dct:source "SOAWG"@en ;
+  skos:broader antech:Spectroscopy ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Spectroscopy ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "XANES"@en ;
+  skos:prefLabel "X-ray absorption near edge structure (xanes) spectroscopy"@en ;
+.
+antech:XCT
+  rdf:type skos:Concept ;
+  dct:source "MAPWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "XCT"@en ;
+  skos:prefLabel "X-ray computed tomography"@en ;
+.
+antech:XPS
+  rdf:type skos:Concept ;
+  dct:source "MAPWG"@en ;
+  skos:broader antech:Spectroscopy ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Spectroscopy ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "XPS"@en ;
+  skos:prefLabel "X-ray photoelectron spectroscopy"@en ;
+.
+antech:XRD
+  rdf:type skos:Concept ;
+  dct:source "MAPWG"@en ;
+  skos:broader antech:Analysistechnique ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "XRD"@en ;
+  skos:prefLabel "X-ray diffraction"@en ;
+.
+antech:XRF
+  rdf:type skos:Concept ;
+  dct:source "SEIWG"@en ;
+  skos:broader antech:Spectroscopy ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Spectroscopy ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "XRF"@en ;
+  skos:prefLabel "X-ray fluorescence spectroscopy"@en ;
+.
+antech:uL2MS
+  rdf:type skos:Concept ;
+  dct:source "SOAWG"@en ;
+  skos:broader antech:Massspectrometry ;
+  skos:broaderTransitive antech:Analysistechnique ;
+  skos:broaderTransitive antech:Massspectrometry ;
+  skos:inScheme <https://purl.org/orex/voc/analyticalTechnique> ;
+  skos:notation "uL2MS"@en ;
+  skos:prefLabel "Microprobe two-step laser mass spectrometry"@en ;
+.
